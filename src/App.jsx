@@ -1,13 +1,15 @@
 import { useState } from 'react'
+import Navbar from './component/Navbar'
+import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-   <div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nulla voluptatum voluptas architecto fugit fuga tempore assumenda totam repellat sequi reprehenderit repudiandae, molestiae nostrum mollitia impedit quod. Hic, reprehenderit necessitatibus.</p>
-   </div>
+   <Router>
+    <Navbar />
+   </Router>
   )
 }
 
