@@ -23,6 +23,10 @@ const Navbar = () => {
             title: "Exclusive",
             items: ["Limited Edition", "Seasonal Picks"],
           },
+          {
+            title: "Exclusive",
+            items: ["Limited Edition", "Seasonal Picks"],
+          },
         ],
       },
     },
@@ -43,6 +47,10 @@ const Navbar = () => {
             title: "Careers",
             items: ["Job Openings", "Internships"],
           },
+          {
+            title: "Team",
+            items: ["Leadership", "Staff"],
+          },
         ],
       },
     },
@@ -57,11 +65,24 @@ const Navbar = () => {
           },
           {
             title: "Accessories",
-            items: ["Handbags", "Jewelry", "Scarves", "Watches"],
+            items: [
+              "Handbags",
+              "Jewelry",
+              "Scarves",
+              "Watches",
+              "Dresses",
+              "Tops",
+              "Jeans",
+              "Activewear",
+            ],
           },
           {
             title: "Shoes",
             items: ["Heels", "Flats", "Boots", "Sandals"],
+          },
+          {
+            title: "Team",
+            items: ["Leadership", "Staff"],
           },
         ],
       },
@@ -73,15 +94,41 @@ const Navbar = () => {
         sections: [
           {
             title: "Clothing",
-            items: ["T-Shirts", "Shorts", "Jackets", "Sleepwear"],
+            items: [
+              "T-Shirts",
+              "Shorts",
+              "Jackets",
+              "Sleepwear",
+              "Caps",
+              "Socks",
+              "Bags",
+            ],
           },
           {
             title: "Toys & Games",
-            items: ["Puzzles", "Action Figures", "Educational Toys"],
+            items: [
+              "Puzzles",
+              "Action Figures",
+              "Educational Toys",
+              "Caps",
+              "Socks",
+              "Bags",
+            ],
+          },
+          {
+            title: "Toys & Games",
+            items: [
+              "Puzzles",
+              "Action Figures",
+              "Educational Toys",
+              "Caps",
+              "Socks",
+              "Bags",
+            ],
           },
           {
             title: "Shoes",
-            items: ["Sneakers", "Boots", "Sandals"],
+            items: ["Sneakers", "Boots", "Sandals", "Caps", "Socks", "Bags"],
           },
         ],
       },
@@ -93,21 +140,43 @@ const Navbar = () => {
         sections: [
           {
             title: "Air Jordan Collection",
-            items: ["Retro Sneakers", "New Releases", "Signature Styles"],
+            items: [
+              "Retro Sneakers",
+              "New Releases",
+              "Signature Styles",
+              "Apparel",
+              "Accessories",
+            ],
           },
           {
             title: "Apparel",
-            items: ["Hoodies", "T-Shirts", "Tracksuits"],
+            items: [
+              "Hoodies",
+              "T-Shirts",
+              "Tracksuits",
+              "Caps",
+              "Socks",
+              "Bags",
+            ],
           },
           {
             title: "Accessories",
-            items: ["Caps", "Socks", "Bags"],
+            items: ["Caps", "Socks", "Bags", "Caps", "Socks", "Bags"],
+          },
+          {
+            title: "Air Jordan Collection",
+            items: [
+              "Retro Sneakers",
+              "New Releases",
+              "Signature Styles",
+              "Apparel",
+              "Accessories",
+            ],
           },
         ],
       },
     },
   ];
-  
 
   const [hoveredItem, setHoveredItem] = useState(null);
 
@@ -141,7 +210,7 @@ const Navbar = () => {
               </Link>
 
               {hoveredItem === index && (
-                <div className="">
+                <div className=" group" >
                   <MegaMenu itemName={item.name} content={item.content} />
                 </div>
               )}
