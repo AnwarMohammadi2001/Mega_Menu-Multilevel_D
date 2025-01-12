@@ -9,8 +9,10 @@ function App() {
 
   return (
    <Router>
-    <Navbar />
-    <Home />
+   <div className=''>
+   <Navbar />
+   <Home />
+   </div>
    </Router>
   )
 }

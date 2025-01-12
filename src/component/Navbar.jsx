@@ -231,7 +231,7 @@ const Navbar = () => {
                 <>
                   {/* Backdrop */}
                   <div
-                    className={`absolute  left-0 right-0 top-full w-full  bg-black   min-h-screen opacity-50 z-10 ${
+                    className={`absolute  left-0 right-0 top-full w-full  bg-black   h-screen opacity-50 z-10 ${
                       isScrolled ? "" : ""
                     }`}
                     onMouseEnter={handleMouseLeave}
