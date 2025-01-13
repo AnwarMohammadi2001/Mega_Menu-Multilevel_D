@@ -412,8 +412,5 @@ export const NIKE_ITEMS = [
         category: "Customise",
         href: "/nike-by-you",
     },
-    {
-        category: "SNKRS",
-        href: "launch",
-    },
+    
 ]
