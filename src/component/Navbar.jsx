@@ -6,7 +6,6 @@ import { SiNike } from "react-icons/si";
 import SearchBar from "./Navbar/SearchBar";
 
 const Navbar = () => {
-  // Navigation items with their multilevel data
   const navItems = [
     {
       name: "New",
@@ -206,27 +205,26 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-white w-full px-8 shadow-md ${
+      className={`bg-white w-full px-8  shadow-md ${
         isScrolled ? "" : "relative"
       } z-30`}
     >
       <div className="py-3 ">
         <div className="flex justify-between items-center">
-          
-            <div className="flex items-center gap-x-1">
-              <span>
-                <SiNike size={65} />
-              </span>
-              <p className="text-2xl font-bold">Nike</p>
-            </div>
-         
+          {/* <div className="flex items-center gap-x-1">
+            <span>
+              <SiNike size={65} />
+            </span>
+            <p className="text-2xl font-bold">Nike</p>
+          </div> */}
+
           <ul className="flex justify-center  w-full gap-x-3">
             {navItems.map((item, index) => (
               <li
                 key={index}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
-                className="px-2"
+                className="px-2 py-2 "
               >
                 <Link
                   to={item.path}
@@ -239,11 +237,12 @@ const Navbar = () => {
                     }`}
                     size={20}
                   />
+                 
                 </Link>
 
                 {delayedItem === index && (
                   <>
-                    {/* Backdrop */}
+                  
                     <div
                       className={`fixed   left-0 right-0 top-20 bottom-0 w-full  bg-black   h-screen opacity-50 z-10 ${
                         isScrolled ? "" : ""
@@ -251,11 +250,11 @@ const Navbar = () => {
                       onMouseEnter={handleMouseLeave}
                     ></div>
 
-                    {/* Mega Menu */}
+                  
                     <div
                       className={`${
-                        isScrolled ? "fixed top-0" : "absolute  "
-                      } left-0 w-full  z-10`}
+                        isScrolled ? "fixed top-0" : "absolute top-10  "
+                      } left-0 w-full   z-20`}
                     >
                       <MegaMenu
                         itemName={item.name}
@@ -268,9 +267,9 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div>
+          {/* <div className="">
             <SearchBar />
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>
