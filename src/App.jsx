@@ -11,9 +11,9 @@ function App() {
   return (
    <Router>
    <div className=''>
-    <Nav />
-   {/* <Navbar /> */}
-   {/* <Home /> */}
+    {/* <Nav /> */}
+   <Navbar /> 
+   <Home />
    </div>
    </Router>
   )

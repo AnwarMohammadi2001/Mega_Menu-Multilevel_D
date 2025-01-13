@@ -4,6 +4,9 @@ import MegaMenu from "./MegaMenu"; // Import the MegaMenu component
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { SiNike } from "react-icons/si";
 import SearchBar from "./Navbar/SearchBar";
+import { NIKE_ITEMS } from "./deta";
+import { CiHeart } from "react-icons/ci";
+import { LuBaggageClaim } from "react-icons/lu";
 
 const Navbar = () => {
   const navItems = [
@@ -211,26 +214,28 @@ const Navbar = () => {
     >
       <div className="py-3 ">
         <div className="flex justify-between items-center">
-          {/* <div className="flex items-center gap-x-1">
+          <div className="flex items-center gap-x-1">
             <span>
               <SiNike size={65} />
             </span>
             <p className="text-2xl font-bold">Nike</p>
-          </div> */}
+          </div>
 
           <ul className="flex justify-center  w-full gap-x-3">
-            {navItems.map((item, index) => (
+            {NIKE_ITEMS.map((item, index) => (
               <li
                 key={index}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
-                className="px-2 py-2 "
+                className={`px-2 py-2  ${
+                  hoveredItem === index ? "" :""
+                } `}
               >
                 <Link
-                  to={item.path}
+                  to={item.href}
                   className="text-gray-700 hover:text-blue-500 flex items-center gap-x-2 font-medium transition duration-300"
                 >
-                  {item.name}
+                  {item.category}
                   <MdKeyboardArrowDown
                     className={`transform transition-transform duration-300 ${
                       hoveredItem === index ? "rotate-180" : ""
@@ -253,12 +258,12 @@ const Navbar = () => {
                   
                     <div
                       className={`${
-                        isScrolled ? "fixed top-0" : "absolute top-10  "
+                        isScrolled ? "fixed top-0" : "absolute top-14  "
                       } left-0 w-full   z-20`}
                     >
                       <MegaMenu
-                        itemName={item.name}
-                        content={item.content}
+                        itemName={item.category}
+                        content={item.product}
                         isVisible={true}
                       />
                     </div>
@@ -267,9 +272,17 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          {/* <div className="">
-            <SearchBar />
-          </div> */}
+          <div className="relative z-30 flex items-center gap-x-1 ">
+          <div className="mr-2">
+          <SearchBar />
+          </div>
+          <div className="p-2 rounded-full hover:bg-gray-200">
+            <CiHeart size={28} />
+          </div>
+          <div className="p-2 rounded-full hover:bg-gray-200">
+            <LuBaggageClaim  size={24} />
+          </div>
+          </div>
         </div>
       </div>
     </nav>

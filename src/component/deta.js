@@ -136,33 +136,33 @@ export const NIKE_ITEMS = [
                     "Hats and Headwear",
                 ]
             },
-            {
-                title: "Shop By Sport",
-                href: "/shop-by-sport",
-                items: [
-                    "Running",
-                    "Basketball",
-                    "Football",
-                    "Goll",
-                    "Tennis",
-                    "Gym and Training",
-                    "Yoga",
-                    "Skatebording",
-                ]
-            },
-            {
-                title: "Shop By Brand",
-                href: "/shop-by-brand",
-                items: [
-                    "Nike Sportwear",
-                    "NikeLab",
-                    "Nike By You",
-                    "Jordan",
-                    "ACG",
-                    "NBA",
-                    "Nike SB",
-                ]
-            }
+            // {
+            //     title: "Shop By Sport",
+            //     href: "/shop-by-sport",
+            //     items: [
+            //         "Running",
+            //         "Basketball",
+            //         "Football",
+            //         "Goll",
+            //         "Tennis",
+            //         "Gym and Training",
+            //         "Yoga",
+            //         "Skatebording",
+            //     ]
+            // },
+            // {
+            //     title: "Shop By Brand",
+            //     href: "/shop-by-brand",
+            //     items: [
+            //         "Nike Sportwear",
+            //         "NikeLab",
+            //         "Nike By You",
+            //         "Jordan",
+            //         "ACG",
+            //         "NBA",
+            //         "Nike SB",
+            //     ]
+            // }
         ]
     },
     {
@@ -247,19 +247,19 @@ export const NIKE_ITEMS = [
                     "Skatebording",
                 ]
             },
-            {
-                title: "Shop By Brand",
-                href: "/shop-by-brand",
-                items: [
-                    "Nike Sportswear",
-                    "NikeLab",
-                    "Nike By You",
-                    "Jordan",
-                    "ACG",
-                    "NBA",
-                    "Nike SB",
-                ]
-            },
+            // {
+            //     title: "Shop By Brand",
+            //     href: "/shop-by-brand",
+            //     items: [
+            //         "Nike Sportswear",
+            //         "NikeLab",
+            //         "Nike By You",
+            //         "Jordan",
+            //         "ACG",
+            //         "NBA",
+            //         "Nike SB",
+            //     ]
+            // },
         ]
     },
     {
@@ -408,9 +408,6 @@ export const NIKE_ITEMS = [
             },
         ]
     },
-    {
-        category: "Customise",
-        href: "/nike-by-you",
-    },
+  
     
 ]

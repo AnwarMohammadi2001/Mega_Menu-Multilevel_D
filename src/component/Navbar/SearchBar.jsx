@@ -24,18 +24,18 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="relative  w-full bg-white max-w-lg  mx-auto">
+    <div className="w-full bg-white max-w-md  mx-auto">
       {/* Search Bar */}
       <form
         onSubmit={handleSearchSubmit}
-        className={`flex items-center gap-2 bg-white border ${
+        className={`flex items-center gap-2  bg-white border ${
           isExpanded ? "border-blue-500 shadow-lg w-full mt-2" : "border-gray-300"
-        } rounded-full px-4 py-2 transition-all duration-300 ${
+        } rounded-full px-2 py-1.5 transition-all duration-300 ${
           isExpanded ? "fixed top-4 left-1/2 transform -translate-x-1/2" : ""
         }`}
         onClick={handleSearchClick}
       >
-        <FiSearch size={20} className="text-gray-500" />
+        <FiSearch size={24} className="text-gray-500 h-full rounded-full" />
         <input
           type="text"
           value={searchValue}

@@ -12,8 +12,8 @@ const MegaMenu = ({ itemName, content, isVisible }) => {
         paddingBottom: isVisible ? "1rem" : "0",
       }}
     >
-      <div className="grid grid-cols-4 mx-40 place-items-center items-start mt-10 transition-all pb-10">
-        {content.sections.map((section, index) => (
+      <div className="grid grid-cols-5 gap-y-5 mx-40 place-items-center items-start mt-10 transition-all pb-10">
+        {content.map((section, index) => (
           <div key={index}>
             <h3 className="font-bold text-lg mb-2">{section.title}</h3>
             <ul className="space-y-2">
@@ -21,7 +21,7 @@ const MegaMenu = ({ itemName, content, isVisible }) => {
                 <li key={idx}>
                   <a
                     href={item.link}
-                    className="hover:text-gray-500 text-sm hover:border-b text-slate-800 block"
+                    className="hover:text-gray-500 cursor-pointer text-sm text-slate-800 block"
                   >
                     {item}
                   </a>
