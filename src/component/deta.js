@@ -1,6 +1,6 @@
 export const NIKE_ITEMS = [
     {
-        category: "New & Featured",
+        category: "New ",
         href: "/new-&-featured",
         product: [
             {
